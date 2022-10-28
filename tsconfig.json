@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "sourceMap": false,
+    "moduleResolution": "Node",
+    "skipLibCheck": true,
+    "strict": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+
+    // Don't automatically include anything.
+    // Only include `@types` packages that we need to import.
+    "types": ["@types/node"],
+
+    "baseUrl": ".",
+    "paths": {
+      "/$/*": ["./types/*"]
+    }
+  },
+  "include": ["./scripts/**/*.ts", "./types/**/*.d.ts"],
+  "exclude": ["**/*.spec.ts", "**/*.test.ts"]
+}

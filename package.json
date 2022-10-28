@@ -1,0 +1,43 @@
+{
+  "name": "hctrl",
+  "version": "0.0.0",
+  "description": "HCTRL",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"no tests\"",
+    "scripts:rpi": "esno ./scripts/rpi-ws2812x.ts",
+    "postinstall": "npm run scripts:rpi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HCTRL/HCTRL.git"
+  },
+  "keywords": [
+    "home-automation",
+    "typescript"
+  ],
+  "author": "vaaski <admin@vaa.ski>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HCTRL/HCTRL/issues"
+  },
+  "homepage": "https://github.com/HCTRL/HCTRL#readme",
+  "dependencies": {
+    "fs-jetpack": "^5.1.0",
+    "rpi-ws281x-native": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^16.18.2",
+    "@typescript-eslint/eslint-plugin": "^5.41.0",
+    "eslint": "^8.26.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.6.0",
+    "esno": "^0.16.3",
+    "execa": "^6.1.0",
+    "nodemon": "^2.0.20",
+    "typescript": "^4.8.4",
+    "vite": "^3.2.1"
+  }
+}
