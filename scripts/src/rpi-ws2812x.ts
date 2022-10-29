@@ -59,8 +59,7 @@ const main = async () => {
   // *---------
   console.log("rebuilding rpi-ws281x-native")
   cwd = modulePath
-  const rebuildResult = await execa("npx", ["--yes", "node-gyp", "rebuild"], { cwd })
-  console.log(rebuildResult.stdout.split("\n").at(-1))
+  await execa("npx", ["--yes", "node-gyp", "rebuild"], { cwd, stdio: "inherit" })
 }
 
 main()

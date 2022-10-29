@@ -36,7 +36,7 @@ const main = async () => {
   }
 
   for (const source of distFolders) {
-    const dest = join(SCP_DEST, source).replace(/\\/g, "/")
+    const dest = join(SCP_DEST, source, "..").replace(/\\/g, "/")
     await execa("scp", ["-r", source, dest], { cwd, stdio: "inherit" })
   }
 }
