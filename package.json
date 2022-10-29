@@ -7,6 +7,7 @@
   "scripts": {
     "test": "echo \"no tests\"",
     "scripts:rpi": "esno ./scripts/rpi-ws2812x.ts",
+    "build:scripts": "tsup-node scripts/*.ts --clean -d scripts/dist",
     "postinstall": "npm run scripts:rpi"
   },
   "repository": {
@@ -36,6 +37,7 @@
     "esno": "^0.16.3",
     "execa": "^6.1.0",
     "nodemon": "^2.0.20",
+    "tsup": "^6.3.0",
     "typescript": "^4.8.4",
     "vite": "^3.2.1"
   },

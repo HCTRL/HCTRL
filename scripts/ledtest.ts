@@ -5,8 +5,7 @@ channel.brightness = 55
 
 const colorArray = channel.array
 for (let i = 0; i < channel.count; i++) {
-  if (i % 2) colorArray[i] = 0xff00ff
-  else colorArray[i] = 0x00ffff
+  colorArray[i] = 0xff00ff
 }
 
 ws281x.render()
