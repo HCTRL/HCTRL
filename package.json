@@ -24,8 +24,7 @@
   },
   "homepage": "https://github.com/HCTRL/HCTRL#readme",
   "dependencies": {
-    "fs-jetpack": "^5.1.0",
-    "rpi-ws281x-native": "^1.0.4"
+    "fs-jetpack": "^5.1.0"
   },
   "devDependencies": {
     "@types/node": "^16.18.2",
@@ -39,5 +38,8 @@
     "nodemon": "^2.0.20",
     "typescript": "^4.8.4",
     "vite": "^3.2.1"
+  },
+  "optionalDependencies": {
+    "rpi-ws281x-native": "^1.0.4"
   }
 }

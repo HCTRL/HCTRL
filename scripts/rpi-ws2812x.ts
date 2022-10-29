@@ -24,6 +24,8 @@ const hwFile = join(nativeLib, "rpihw.c")
 const main = async () => {
   console.log("fixing rpi-ws281x-native")
 
+  if (!jet.exists(modulePath)) return console.log("rpi-ws281x-native not installed")
+
   // *---------
   console.log("removing outdated rpi_ws281x")
   jet.remove(nativeLib)
