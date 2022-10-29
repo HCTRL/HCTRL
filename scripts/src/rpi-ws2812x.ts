@@ -5,6 +5,7 @@ import { dirname, join } from "path"
 import { fileURLToPath } from "url"
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
+const root = join(__dirname, "../..")
 
 const REPO_URL = "https://github.com/jgarff/rpi_ws281x"
 const COMMIT_SHA1 = "1ba8e385708fb7802b09c0177a7ea4293948e25c"
@@ -17,7 +18,7 @@ const INSERT = `    {
       .desc = "Raspberry Pi 3 Model B Rev 1.2"
     },`.split("\n")
 
-const modulePath = join(__dirname, "../node_modules/rpi-ws281x-native")
+const modulePath = join(root, "node_modules/rpi-ws281x-native")
 const nativeLib = join(modulePath, "src/rpi_ws281x")
 const hwFile = join(nativeLib, "rpihw.c")
 
