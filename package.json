@@ -8,7 +8,7 @@
     "test": "echo \"no tests\"",
     "dev": "dotenv -- turbo run dev",
     "build": "turbo run build",
-    "scripts:rpi": "esno ./scripts/rpi-ws2812x.ts",
+    "scripts:rpi": "esno ./scripts/src/rpi-ws2812x.ts",
     "build:scripts": "tsup-node scripts/*.ts --clean -d scripts/dist",
     "postinstall": "npm run scripts:rpi"
   },
