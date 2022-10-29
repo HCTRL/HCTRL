@@ -1,0 +1,6 @@
+{
+  "name": "scripts",
+  "scripts": {
+    "build": "tsup-node src --clean"
+  }
+}

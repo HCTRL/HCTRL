@@ -6,6 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"no tests\"",
+    "dev": "dotenv -- turbo run dev",
+    "build": "turbo run build",
     "scripts:rpi": "esno ./scripts/rpi-ws2812x.ts",
     "build:scripts": "tsup-node scripts/*.ts --clean -d scripts/dist",
     "postinstall": "npm run scripts:rpi"
@@ -24,20 +26,24 @@
     "url": "https://github.com/HCTRL/HCTRL/issues"
   },
   "homepage": "https://github.com/HCTRL/HCTRL#readme",
-  "dependencies": {
-    "fs-jetpack": "^5.1.0"
-  },
+  "workspaces": [
+    "apps/*",
+    "scripts"
+  ],
   "devDependencies": {
     "@types/node": "^16.18.2",
     "@typescript-eslint/eslint-plugin": "^5.41.0",
+    "dotenv-cli": "^6.0.0",
     "eslint": "^8.26.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.6.0",
     "esno": "^0.16.3",
     "execa": "^6.1.0",
+    "fs-jetpack": "^5.1.0",
     "nodemon": "^2.0.20",
     "tsup": "^6.3.0",
+    "turbo": "^1.6.2",
     "typescript": "^4.8.4",
     "vite": "^3.2.1"
   },

@@ -1,8 +1,8 @@
 {
   "watch": [
-    "./scripts/**/*.ts"
+    "./src/*.ts"
   ],
-  "exec": "npx dotenv -- npx esno",
+  "exec": "npx esno ./src/index.ts",
   "ext": "ts",
   "events": {
     "start": "node -e \"console.clear()\""
