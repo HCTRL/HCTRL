@@ -9,6 +9,8 @@
     "dev": "dotenv -- turbo run dev",
     "build": "turbo run build",
     "scripts:rpi": "esno ./scripts/src/rpi-ws2812x.ts",
+    "scripts:localdeploy": "dotenv -- esno ./scripts/src/localdeploy.ts",
+    "watch:localdeploy": "nodemon --exec dotenv -- esno ./scripts/src/localdeploy.ts",
     "build:scripts": "tsup-node scripts/*.ts --clean -d scripts/dist",
     "postinstall": "npm run scripts:rpi"
   },
@@ -31,7 +33,9 @@
     "scripts"
   ],
   "devDependencies": {
+    "@types/chroma-js": "^2.1.4",
     "@types/node": "^16.18.2",
+    "@types/rpi-ws281x-native": "^1.0.0",
     "@typescript-eslint/eslint-plugin": "^5.41.0",
     "dotenv-cli": "^6.0.0",
     "eslint": "^8.26.0",
@@ -49,5 +53,8 @@
   },
   "optionalDependencies": {
     "rpi-ws281x-native": "^1.0.4"
+  },
+  "dependencies": {
+    "chroma-js": "^2.4.2"
   }
 }

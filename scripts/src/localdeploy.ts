@@ -17,7 +17,7 @@ const main = async () => {
   const mainPackage = jet.read("package.json", "json")
   const workspaces: string[] = mainPackage.workspaces
 
-  await execa("npm", ["run", "build"], { cwd, stdio: "inherit" })
+  await execa("npm", ["run", "build", "--", "--force"], { cwd, stdio: "inherit" })
 
   const moduleFolders = workspaces
     .map(workspace => {

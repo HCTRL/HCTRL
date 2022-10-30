@@ -1,0 +1,6 @@
+{
+  "name": "ledstrip",
+  "scripts": {
+    "build": "tsup-node src --clean --format esm"
+  }
+}

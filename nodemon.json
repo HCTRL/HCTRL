@@ -1,6 +1,6 @@
 {
   "watch": [
-    "./scripts/**/*.ts"
+    "./**/*.ts"
   ],
   "exec": "npx dotenv -- npx esno",
   "ext": "ts",
