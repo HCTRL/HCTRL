@@ -2,7 +2,7 @@
   "watch": [
     "./src/*.ts"
   ],
-  "exec": "npx esno ./src/index.ts",
+  "exec": "npx esno",
   "ext": "ts",
   "events": {
     "start": "node -e \"console.clear()\""
