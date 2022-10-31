@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"no tests\"",
-    "dev": "dotenv -- turbo run dev",
+    "dev": "dotenv -- turbo run dev --force",
     "build": "turbo run build",
     "scripts:rpi": "esno ./scripts/src/rpi-ws2812x.ts",
     "scripts:localdeploy": "dotenv -- esno ./scripts/src/localdeploy.ts",
@@ -30,6 +30,7 @@
   "homepage": "https://github.com/HCTRL/HCTRL#readme",
   "workspaces": [
     "apps/*",
+    "packages/*",
     "scripts"
   ],
   "devDependencies": {

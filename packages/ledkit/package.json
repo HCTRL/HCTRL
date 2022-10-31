@@ -1,0 +1,7 @@
+{
+  "name": "ledkit",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "tsup-node src --clean"
+  }
+}
