@@ -1,7 +1,5 @@
 {
-  "watch": [
-    "./**/*.ts"
-  ],
+  "watch": ["./**/*.ts"],
   "exec": "npx dotenv -- npx esno",
   "ext": "ts",
   "events": {

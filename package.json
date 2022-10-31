@@ -13,7 +13,7 @@
     "watch:localdeploy": "nodemon --exec dotenv -- esno ./scripts/src/localdeploy.ts",
     "build:scripts": "tsup-node scripts/*.ts --clean -d scripts/dist",
     "postinstall": "npm run scripts:rpi",
-    "format": "prettier --no-error-on-unmatched-pattern -w **/*.{vue,ts,js}"
+    "format": "prettier --no-error-on-unmatched-pattern -w *"
   },
   "repository": {
     "type": "git",
