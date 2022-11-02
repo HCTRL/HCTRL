@@ -76,8 +76,6 @@ export class Ledkit {
     this.shiftedBy += 1 / (this.shiftOverTime / (1000 / this.FPS))
     if (this.shiftedBy >= 1) this.shiftedBy = 0
 
-    console.log(this.shiftedBy)
-
     const frameTime = performance.now() - frameStart
     if (this.rendering) setTimeout(this.render, 1000 / this.FPS - frameTime)
   }

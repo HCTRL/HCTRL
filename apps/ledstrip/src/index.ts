@@ -1,20 +1,19 @@
 import ws281x from "rpi-ws281x-native"
-import chroma from "chroma-js"
+import { Ledkit } from "$ledkit/index.js"
 
 const NUM_LEDS = 300
 
 const channel = ws281x(NUM_LEDS, { stripType: "ws2812" })
 channel.brightness = 50
 
-const colors = channel.array
-const scale = chroma.scale(["#fecb6f", "#393b62"]).mode("lch")
-// const scale = chroma.bezier(["yellow", "blue"])
-
-for (let i = 0; i < colors.length; i++) {
-  colors[i] = scale(i / colors.length).num()
+const renderFn = (colors: number[]) => {
+  for (let i = 0; i < channel.array.length; i++) {
+    channel.array[i] = colors[i]
+  }
+  ws281x.render()
 }
 
-ws281x.render()
-console.log(`rendered at ${new Date().toLocaleString()}`)
+const kit = new Ledkit(renderFn)
+kit.startRendering()
 
 export {}
