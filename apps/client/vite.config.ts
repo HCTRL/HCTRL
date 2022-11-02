@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [vue()],
   resolve: {
     alias: {
-      "@": fileURLToPath(new URL("./src", import.meta.url)),
+      $ledkit: fileURLToPath(new URL("../../packages/ledkit/src", import.meta.url)),
     },
   },
 })

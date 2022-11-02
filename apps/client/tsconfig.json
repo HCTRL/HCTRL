@@ -1,5 +1,10 @@
 {
   "files": [],
+  "baseUrl": ".",
+  "paths": {
+    "$types/*": ["./types/*"],
+    "$ledkit/*": ["../../packages/ledkit/src/*"]
+  },
   "references": [
     {
       "path": "./tsconfig.config.json"

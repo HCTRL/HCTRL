@@ -15,9 +15,10 @@
 
     "baseUrl": ".",
     "paths": {
-      "/$/*": ["./types/*"]
+      "$types/*": ["./types/*"],
+      "$ledkit/*": ["./packages/ledkit/src/*"]
     }
   },
-  "include": ["./scripts/**/*.ts", "./types/**/*.d.ts"],
+  "include": ["./scripts/**/*.ts", "./types/**/*.d.ts", "./apps/**/*.ts"],
   "exclude": ["**/*.spec.ts", "**/*.test.ts"]
 }
