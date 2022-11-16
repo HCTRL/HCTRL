@@ -1,6 +1,6 @@
 {
   "name": "ledstrip",
   "scripts": {
-    "build": "tsup src --clean --format esm --external rpi-ws281x-native"
+    "build": "tsup src --clean --external rpi-ws281x-native socket.io-client"
   }
 }

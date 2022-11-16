@@ -59,6 +59,10 @@ export class Ledkit {
     this.renderFn(this.colors)
   }
 
+  public setColors = (colors: Color[]) => {
+    this.colors = colors
+  }
+
   public startRendering = () => {
     this.rendering = true
     this.render()

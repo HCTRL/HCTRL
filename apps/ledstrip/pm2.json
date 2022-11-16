@@ -1,0 +1,8 @@
+{
+  "apps": [
+    {
+      "name": "ledstrip",
+      "script": "node -r dotenv/config ./apps/ledstrip/dist/index.js"
+    }
+  ]
+}
