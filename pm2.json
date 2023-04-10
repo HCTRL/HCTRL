@@ -1,0 +1,8 @@
+{
+  "apps": [
+    {
+      "name": "HCTRL",
+      "script": "./dist-backend/index.mjs"
+    }
+  ]
+}
