@@ -6,22 +6,20 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "main": "./dist-backend/index.cjs",
-  "types": "./dist-backend/index.d.ts",
-  "files": [
-    "dist-backend"
-  ],
+  "private": true,
+  "main": "./dist/backend/index.cjs",
+  "types": "./dist/backend/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist-backend/index.mjs",
-      "require": "./dist-backend/index.cjs"
+      "import": "./dist/backend/index.mjs",
+      "require": "./dist/backend/index.cjs"
     }
   },
   "unbuild": {
     "entries": [
-      "./backend/index"
+      "./packages/backend/index"
     ],
-    "outDir": "./dist-backend",
+    "outDir": "./dist/backend",
     "declaration": true,
     "rollup": {
       "emitCJS": true
@@ -34,11 +32,10 @@
     "front:dev": "vite",
     "front:build": "vue-tsc && vite build",
     "front:preview": "vite preview",
-    "back:dev": "nodemon ./backend/index.ts",
+    "back:dev": "nodemon ./packages/backend/index.ts",
     "back:build": "unbuild",
-    "back:start": "node ./dist-backend/index.mjs"
+    "back:start": "node ./dist/backend/index.mjs"
   },
-  "private": true,
   "dependencies": {
     "vue": "^3.2.47"
   },

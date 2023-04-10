@@ -2,7 +2,7 @@
   "apps": [
     {
       "name": "HCTRL",
-      "script": "./dist-backend/index.mjs"
+      "script": "./dist/backend/index.mjs"
     }
   ]
 }
