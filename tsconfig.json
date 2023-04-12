@@ -17,10 +17,10 @@
     "noEmit": true
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue"
+    "packages/frontend/**/*.ts",
+    "packages/frontend/**/*.d.ts",
+    "packages/frontend/**/*.tsx",
+    "packages/frontend/**/*.vue"
   ],
   "references": [
     {
